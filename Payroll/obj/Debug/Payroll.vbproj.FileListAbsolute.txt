@@ -1,0 +1,16 @@
+C:\Users\RJ\VB\Payroll\Payroll\bin\Debug\Payroll.exe.config
+C:\Users\RJ\VB\Payroll\Payroll\bin\Debug\Payroll.exe
+C:\Users\RJ\VB\Payroll\Payroll\bin\Debug\Payroll.pdb
+C:\Users\RJ\VB\Payroll\Payroll\bin\Debug\Payroll.xml
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.vbprojAssemblyReference.cache
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.Login.resources
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.Resources.resources
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.vbproj.GenerateResource.cache
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.vbproj.CoreCompileInputs.cache
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.exe
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.xml
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.pdb
+C:\Users\RJ\VB\Payroll\Payroll\bin\Debug\payroll.mdb
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.Main.resources
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.About.resources
+C:\Users\RJ\VB\Payroll\Payroll\obj\Debug\Payroll.Employee201.resources
