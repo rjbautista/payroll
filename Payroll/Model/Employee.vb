@@ -9,15 +9,15 @@ Public Class Employee
         command = New OleDb.OleDbCommand("INSERT INTO Employee (emp_num, lname, fname, mname, bday, rate, sss, philhealth, pagibig) VALUES (@empnum, @lname, @fname, @mname, @bday, @rate, @sss, @philhealth, @pagibig)", connection)
 
         connection.Open()
-        command.Parameters.Add("@empnum", OleDbType.VarChar).Value = Employee201.txtEmpNum.Text
-        command.Parameters.Add("@lname", OleDbType.VarChar).Value = Employee201.txtLastName.Text
-        command.Parameters.Add("@fname", OleDbType.VarChar).Value = Employee201.txtFirstName.Text
-        command.Parameters.Add("@mname", OleDbType.VarChar).Value = Employee201.txtMiddleName.Text
-        command.Parameters.Add("@bday", OleDbType.VarChar).Value = Employee201.cmbBday.Value.ToShortDateString()
-        command.Parameters.Add("@rate", OleDbType.VarChar).Value = Employee201.txtRate.Text
-        command.Parameters.Add("@sss", OleDbType.VarChar).Value = Employee201.txtSSS.Text
-        command.Parameters.Add("@philhealth", OleDbType.VarChar).Value = Employee201.txtPhilhealth.Text
-        command.Parameters.Add("@pagibig", OleDbType.VarChar).Value = Employee201.txtPagIbig.Text
+        command.Parameters.Add("@empnum", OleDbType.VarChar).Value = frmEmployee201.txtEmpNum.Text
+        command.Parameters.Add("@lname", OleDbType.VarChar).Value = frmEmployee201.txtLastName.Text
+        command.Parameters.Add("@fname", OleDbType.VarChar).Value = frmEmployee201.txtFirstName.Text
+        command.Parameters.Add("@mname", OleDbType.VarChar).Value = frmEmployee201.txtMiddleName.Text
+        command.Parameters.Add("@bday", OleDbType.VarChar).Value = frmEmployee201.cmbBday.Value.ToShortDateString()
+        command.Parameters.Add("@rate", OleDbType.VarChar).Value = frmEmployee201.txtRate.Text
+        command.Parameters.Add("@sss", OleDbType.VarChar).Value = frmEmployee201.txtSSS.Text
+        command.Parameters.Add("@philhealth", OleDbType.VarChar).Value = frmEmployee201.txtPhilhealth.Text
+        command.Parameters.Add("@pagibig", OleDbType.VarChar).Value = frmEmployee201.txtPagIbig.Text
 
         command.ExecuteNonQuery()
         MsgBox("New Employee has been created", vbInformation)
@@ -32,15 +32,15 @@ Public Class Employee
         command = New OleDb.OleDbCommand("UPDATE Employee SET emp_num = @empnum, lname = @lname, fname = @fname, mname = @mname, bday = @bday, rate = @rate, sss = @sss, philhealth = @philhealth, pagibig = @pagibig WHERE ID = @empID", connection)
 
         connection.Open()
-        command.Parameters.Add("@empnum", OleDbType.VarChar).Value = Employee201.txtEmpNum.Text
-        command.Parameters.Add("@lname", OleDbType.VarChar).Value = Employee201.txtLastName.Text
-        command.Parameters.Add("@fname", OleDbType.VarChar).Value = Employee201.txtFirstName.Text
-        command.Parameters.Add("@mname", OleDbType.VarChar).Value = Employee201.txtMiddleName.Text
-        command.Parameters.Add("@bday", OleDbType.VarChar).Value = Employee201.cmbBday.Value.ToShortDateString()
-        command.Parameters.Add("@rate", OleDbType.VarChar).Value = Employee201.txtRate.Text
-        command.Parameters.Add("@sss", OleDbType.VarChar).Value = Employee201.txtSSS.Text
-        command.Parameters.Add("@philhealth", OleDbType.VarChar).Value = Employee201.txtPhilhealth.Text
-        command.Parameters.Add("@pagibig", OleDbType.VarChar).Value = Employee201.txtPagIbig.Text
+        command.Parameters.Add("@empnum", OleDbType.VarChar).Value = frmEmployee201.txtEmpNum.Text
+        command.Parameters.Add("@lname", OleDbType.VarChar).Value = frmEmployee201.txtLastName.Text
+        command.Parameters.Add("@fname", OleDbType.VarChar).Value = frmEmployee201.txtFirstName.Text
+        command.Parameters.Add("@mname", OleDbType.VarChar).Value = frmEmployee201.txtMiddleName.Text
+        command.Parameters.Add("@bday", OleDbType.VarChar).Value = frmEmployee201.cmbBday.Value.ToShortDateString()
+        command.Parameters.Add("@rate", OleDbType.VarChar).Value = frmEmployee201.txtRate.Text
+        command.Parameters.Add("@sss", OleDbType.VarChar).Value = frmEmployee201.txtSSS.Text
+        command.Parameters.Add("@philhealth", OleDbType.VarChar).Value = frmEmployee201.txtPhilhealth.Text
+        command.Parameters.Add("@pagibig", OleDbType.VarChar).Value = frmEmployee201.txtPagIbig.Text
         command.Parameters.Add("@empID", OleDbType.VarChar).Value = EmpID
 
         command.ExecuteNonQuery()
@@ -82,8 +82,8 @@ Public Class Employee
         Dim da As New OleDb.OleDbDataAdapter
         Dim ds As New DataSet
 
-        command = New OleDb.OleDbCommand("SELECT * FROM Employee WHERE lname LIKE '*Cruz*'", connection)
-        'command.Parameters.Add("@keyword", OleDbType.VarChar).Value = Keyword
+        command = New OleDb.OleDbCommand("SELECT * FROM Employee WHERE lname = @keyword OR fname = @keyword OR emp_num = @keyword ", connection)
+        command.Parameters.Add("@keyword", OleDbType.VarChar).Value = Keyword
         connection.Open()
         da.SelectCommand = command
         da.Fill(ds)
