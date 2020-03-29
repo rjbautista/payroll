@@ -13,6 +13,18 @@ Public Class Timesheet
         Return ds
     End Function
 
+    Public Function GetPostedCutoff() As DataSet
+        Dim connection As OleDb.OleDbConnection = New OleDb.OleDbConnection(PY.ConnectionString)
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim ds As New DataSet
+        Dim Sql As String = "SELECT * FROM Cutoff WHERE posted = TRUE"
+        connection.Open()
+        da.SelectCommand = New OleDb.OleDbCommand(Sql, connection)
+        da.Fill(ds)
+        connection.Close()
+        Return ds
+    End Function
+
     Public Function GetUnsubmittedEmployee(ByRef CutoffID As String) As DataSet
         Dim connection As OleDb.OleDbConnection = New OleDb.OleDbConnection(PY.ConnectionString)
         Dim command As OleDb.OleDbCommand
@@ -64,7 +76,7 @@ Public Class Timesheet
         Dim connection As OleDb.OleDbConnection = New OleDb.OleDbConnection(PY.ConnectionString)
         Dim command As OleDb.OleDbCommand
         ' CREATE Timesheet header
-        command = New OleDb.OleDbCommand("INSERT INTO TimesheetHeader (cutoffID, employeeID, total_ot, total_ut, total_late, total_dow) VALUES (@cutoffID, @employeeID, @totalOt, @totalUt, @totalLate, @totalDow)", connection)
+        command = New OleDb.OleDbCommand("INSERT INTO TimesheetHeader (cutoffID, employeeID, total_ot, total_ut, total_late, total_dow,total_regular_holiday,total_special_holiday) VALUES (@cutoffID, @employeeID, @totalOt, @totalUt, @totalLate, @totalDow,@totalRegular,@totalSpecial)", connection)
 
         connection.Open()
         command.Parameters.Add("@cutoffID", OleDbType.Numeric).Value = frmTimesheet.lblCutoffID.Text
@@ -73,6 +85,8 @@ Public Class Timesheet
         command.Parameters.Add("@totalUt", OleDbType.Numeric).Value = frmTimesheet.lblTotalUndertime.Text
         command.Parameters.Add("@totalLate", OleDbType.Numeric).Value = frmTimesheet.lblTotalLate.Text
         command.Parameters.Add("@totalDow", OleDbType.Numeric).Value = frmTimesheet.lblTotalDays.Text
+        command.Parameters.Add("@totalRegular", OleDbType.Numeric).Value = frmTimesheet.lblRegularHoliday.Text
+        command.Parameters.Add("@totalSpecial", OleDbType.Numeric).Value = frmTimesheet.lblSpecialHoliday.Text
 
         command.ExecuteNonQuery()
         connection.Close()
@@ -80,6 +94,7 @@ Public Class Timesheet
     End Sub
 
     Public Sub CreateDetail(ByVal empIn, ByVal empOut, ByVal empOt, ByVal empUt, ByVal empLate, ByVal empDow)
+        Dim holiday As New Holiday
         Dim connection As OleDb.OleDbConnection = New OleDb.OleDbConnection(PY.ConnectionString)
         Dim command As OleDb.OleDbCommand
 

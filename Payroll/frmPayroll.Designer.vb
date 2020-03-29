@@ -141,7 +141,7 @@ Partial Class frmPayroll
         'cmdProcess
         '
         Me.cmdProcess.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.cmdProcess.Location = New System.Drawing.Point(826, 38)
+        Me.cmdProcess.Location = New System.Drawing.Point(826, 35)
         Me.cmdProcess.Name = "cmdProcess"
         Me.cmdProcess.Size = New System.Drawing.Size(183, 50)
         Me.cmdProcess.TabIndex = 8

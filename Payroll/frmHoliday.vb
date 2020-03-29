@@ -18,6 +18,11 @@
     End Sub
 
     Private Sub CmdSave_Click(sender As Object, e As EventArgs) Handles cmdSave.Click
+        If txtTitle.Text.Trim = "" Then
+            MsgBox("Title field is required.", vbInformation)
+            Exit Sub
+        End If
+
         grpHoliday.Visible = False
         imgHoliday.Visible = True
         cmdAdd.Enabled = True

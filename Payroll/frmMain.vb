@@ -1,6 +1,6 @@
 ﻿Public Class frmMain
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Panel1.Width = Me.Width
     End Sub
 
     Private Sub MenuAbout_Click(sender As Object, e As EventArgs) Handles menuAbout.Click
@@ -8,6 +8,7 @@
     End Sub
 
     Private Sub MenuEmp201_Click(sender As Object, e As EventArgs) Handles menuEmp201.Click
+        CloseAllWindows()
         Panel1.Controls.Clear()
         frmEmployee201.TopMost = True
         frmEmployee201.TopLevel = False
@@ -16,6 +17,7 @@
     End Sub
 
     Private Sub MenuHolidays_Click(sender As Object, e As EventArgs) Handles menuHolidays.Click
+        CloseAllWindows()
         Panel1.Controls.Clear()
         frmHoliday.TopMost = True
         frmHoliday.TopLevel = False
@@ -28,7 +30,7 @@
     End Sub
 
     Private Sub TimesheetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimesheetToolStripMenuItem.Click
-
+        CloseAllWindows()
         Dim timesheet = New Timesheet
         Dim ds = timesheet.GetActiveCutoff()
 
@@ -55,6 +57,7 @@
     End Sub
 
     Private Sub CutoffScheduleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutoffScheduleToolStripMenuItem.Click
+        CloseAllWindows()
         Dim timesheet = New Timesheet
         Dim ds = timesheet.GetActiveCutoff()
 
@@ -71,7 +74,7 @@
     End Sub
 
     Private Sub ProcessPayrollToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProcessPayrollToolStripMenuItem.Click
-
+        CloseAllWindows()
         Panel1.Controls.Clear()
         frmPayroll.TopMost = True
         frmPayroll.TopLevel = False
@@ -80,6 +83,19 @@
     End Sub
 
     Private Sub GeneratePayslipToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GeneratePayslipToolStripMenuItem.Click
+        CloseAllWindows()
         frmPrint.Show()
+    End Sub
+
+    Private Sub frmMain_MaximumSizeChanged(sender As Object, e As EventArgs) Handles Me.MaximumSizeChanged
+        Panel1.Width = Me.Width
+    End Sub
+
+    Private Sub CloseAllWindows()
+        frmCutoff.Close()
+        frmEmployee201.Close()
+        frmHoliday.Close()
+        frmPayroll.Close()
+        frmPrint.Close()
     End Sub
 End Class

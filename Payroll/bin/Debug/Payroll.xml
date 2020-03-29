@@ -432,19 +432,19 @@ Used to sort self-referenced table's rows
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:Payroll.payrollDataSet6.PayrollDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:Payroll.payrollDataSet6.EmployeeDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:Payroll.payrollDataSet6.PayrollRow">
+<member name="T:Payroll.payrollDataSet6.PayrollDataTable">
 <summary>
-Represents strongly named DataRow class.
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Payroll.payrollDataSet6.DataTable1DataTable">
+<summary>
+Represents the strongly named DataTable class.
 </summary>
 </member>
 <member name="T:Payroll.payrollDataSet6.EmployeeRow">
@@ -452,9 +452,14 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:Payroll.payrollDataSet6.PayrollRowChangeEvent">
+<member name="T:Payroll.payrollDataSet6.PayrollRow">
 <summary>
-Row event argument class
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Payroll.payrollDataSet6.DataTable1Row">
+<summary>
+Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Payroll.payrollDataSet6.EmployeeRowChangeEvent">
@@ -462,12 +467,27 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Payroll.payrollDataSet6.PayrollRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Payroll.payrollDataSet6.DataTable1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Payroll.payrollDataSet6TableAdapters.EmployeeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
 <member name="T:Payroll.payrollDataSet6TableAdapters.PayrollTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:Payroll.payrollDataSet6TableAdapters.EmployeeTableAdapter">
+<member name="T:Payroll.payrollDataSet6TableAdapters.DataTable1TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

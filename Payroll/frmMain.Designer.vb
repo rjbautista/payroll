@@ -39,12 +39,11 @@ Partial Class frmMain
         '
         'menuTimesheet
         '
-        Me.menuTimesheet.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.menuTimesheet.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.menuTimesheet.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageToolStripMenuItem, Me.TimesheetToolStripMenuItem, Me.PayrollToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.menuAbout})
         Me.menuTimesheet.Location = New System.Drawing.Point(0, 0)
         Me.menuTimesheet.Name = "menuTimesheet"
-        Me.menuTimesheet.Size = New System.Drawing.Size(2076, 33)
+        Me.menuTimesheet.Size = New System.Drawing.Size(2574, 33)
         Me.menuTimesheet.TabIndex = 0
         Me.menuTimesheet.Text = "MenuStrip1"
         '
@@ -83,13 +82,13 @@ Partial Class frmMain
         'CutoffScheduleToolStripMenuItem
         '
         Me.CutoffScheduleToolStripMenuItem.Name = "CutoffScheduleToolStripMenuItem"
-        Me.CutoffScheduleToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.CutoffScheduleToolStripMenuItem.Size = New System.Drawing.Size(240, 34)
         Me.CutoffScheduleToolStripMenuItem.Text = "Cutoff Schedule"
         '
         'ProcessPayrollToolStripMenuItem
         '
         Me.ProcessPayrollToolStripMenuItem.Name = "ProcessPayrollToolStripMenuItem"
-        Me.ProcessPayrollToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.ProcessPayrollToolStripMenuItem.Size = New System.Drawing.Size(240, 34)
         Me.ProcessPayrollToolStripMenuItem.Text = "Process Payroll"
         '
         'ReportsToolStripMenuItem
@@ -102,7 +101,7 @@ Partial Class frmMain
         'GeneratePayslipToolStripMenuItem
         '
         Me.GeneratePayslipToolStripMenuItem.Name = "GeneratePayslipToolStripMenuItem"
-        Me.GeneratePayslipToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.GeneratePayslipToolStripMenuItem.Size = New System.Drawing.Size(168, 34)
         Me.GeneratePayslipToolStripMenuItem.Text = "Payslip"
         '
         'menuAbout
@@ -117,7 +116,7 @@ Partial Class frmMain
         Me.Panel1.BackgroundImage = Global.Payroll.My.Resources.Resources.login_bg
         Me.Panel1.Location = New System.Drawing.Point(0, 35)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(2076, 1134)
+        Me.Panel1.Size = New System.Drawing.Size(2562, 1177)
         Me.Panel1.TabIndex = 1
         '
         'frmMain
@@ -125,11 +124,10 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Payroll.My.Resources.Resources.login_bg
-        Me.ClientSize = New System.Drawing.Size(2076, 1171)
+        Me.ClientSize = New System.Drawing.Size(2574, 1224)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.menuTimesheet)
         Me.MainMenuStrip = Me.menuTimesheet
-        Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Payroll System | Account Login"

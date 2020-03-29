@@ -27,6 +27,21 @@ Partial Class frmTimesheet
         Me.lblEmployeeName = New System.Windows.Forms.Label()
         Me.cmdSave = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.lblThuSH = New System.Windows.Forms.Label()
+        Me.lblThuRH = New System.Windows.Forms.Label()
+        Me.lblWedSH = New System.Windows.Forms.Label()
+        Me.lblWedRH = New System.Windows.Forms.Label()
+        Me.lblTueSH = New System.Windows.Forms.Label()
+        Me.lblTueRH = New System.Windows.Forms.Label()
+        Me.lblMonSH = New System.Windows.Forms.Label()
+        Me.lblMonRH = New System.Windows.Forms.Label()
+        Me.lblSunSH = New System.Windows.Forms.Label()
+        Me.lblSunRH = New System.Windows.Forms.Label()
+        Me.lblSatSH = New System.Windows.Forms.Label()
+        Me.lblSatRH = New System.Windows.Forms.Label()
+        Me.lblFriSH = New System.Windows.Forms.Label()
+        Me.lblFriRH = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.Label69 = New System.Windows.Forms.Label()
         Me.lbThuUM = New System.Windows.Forms.Label()
@@ -112,7 +127,17 @@ Partial Class frmTimesheet
         Me.chkSun = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.chkSat = New System.Windows.Forms.CheckBox()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblRegularHoliday = New System.Windows.Forms.Label()
+        Me.lblSpecialHoliday = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.lblTotalLate = New System.Windows.Forms.Label()
         Me.lblTotalUndertime = New System.Windows.Forms.Label()
         Me.lblTotalOvertime = New System.Windows.Forms.Label()
@@ -151,6 +176,9 @@ Partial Class frmTimesheet
         Me.grpTimesheet.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.UnsubmittedGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,7 +199,7 @@ Partial Class frmTimesheet
         Me.grpTimesheet.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.grpTimesheet.Location = New System.Drawing.Point(937, 41)
         Me.grpTimesheet.Name = "grpTimesheet"
-        Me.grpTimesheet.Size = New System.Drawing.Size(1076, 922)
+        Me.grpTimesheet.Size = New System.Drawing.Size(1384, 922)
         Me.grpTimesheet.TabIndex = 1
         Me.grpTimesheet.TabStop = False
         Me.grpTimesheet.Text = "Employee Timesheet"
@@ -203,18 +231,35 @@ Partial Class frmTimesheet
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.TableLayoutPanel1.ColumnCount = 11
+        Me.TableLayoutPanel1.ColumnCount = 13
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.415823!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.64522!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.84016!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.51852!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.37427!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.775828!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.335283!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.288499!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.042885!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.712042!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.387434!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.93232!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.60374!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.65206!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.11498!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.487805!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.707317!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.139373!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.707317!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.923345!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.358885!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.lblThuSH, 12, 7)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblThuRH, 11, 7)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblWedSH, 12, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblWedRH, 11, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblTueSH, 12, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblTueRH, 11, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblMonSH, 12, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblMonRH, 11, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblSunSH, 12, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblSunRH, 11, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblSatSH, 12, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblSatRH, 11, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblFriSH, 12, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblFriRH, 11, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label21, 12, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label68, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label69, 4, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.lbThuUM, 10, 7)
@@ -300,6 +345,7 @@ Partial Class frmTimesheet
         Me.TableLayoutPanel1.Controls.Add(Me.chkSun, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.chkSat, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label20, 11, 0)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(17, 94)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -313,13 +359,162 @@ Partial Class frmTimesheet
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1027, 438)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1340, 438)
         Me.TableLayoutPanel1.TabIndex = 42
+        '
+        'lblThuSH
+        '
+        Me.lblThuSH.AutoSize = True
+        Me.lblThuSH.Location = New System.Drawing.Point(1247, 375)
+        Me.lblThuSH.Name = "lblThuSH"
+        Me.lblThuSH.Size = New System.Drawing.Size(23, 25)
+        Me.lblThuSH.TabIndex = 90
+        Me.lblThuSH.Text = "0"
+        Me.lblThuSH.Visible = False
+        '
+        'lblThuRH
+        '
+        Me.lblThuRH.AutoSize = True
+        Me.lblThuRH.Location = New System.Drawing.Point(1146, 375)
+        Me.lblThuRH.Name = "lblThuRH"
+        Me.lblThuRH.Size = New System.Drawing.Size(23, 25)
+        Me.lblThuRH.TabIndex = 89
+        Me.lblThuRH.Text = "0"
+        Me.lblThuRH.Visible = False
+        '
+        'lblWedSH
+        '
+        Me.lblWedSH.AutoSize = True
+        Me.lblWedSH.Location = New System.Drawing.Point(1247, 320)
+        Me.lblWedSH.Name = "lblWedSH"
+        Me.lblWedSH.Size = New System.Drawing.Size(23, 25)
+        Me.lblWedSH.TabIndex = 88
+        Me.lblWedSH.Text = "0"
+        Me.lblWedSH.Visible = False
+        '
+        'lblWedRH
+        '
+        Me.lblWedRH.AutoSize = True
+        Me.lblWedRH.Location = New System.Drawing.Point(1146, 320)
+        Me.lblWedRH.Name = "lblWedRH"
+        Me.lblWedRH.Size = New System.Drawing.Size(23, 25)
+        Me.lblWedRH.TabIndex = 87
+        Me.lblWedRH.Text = "0"
+        Me.lblWedRH.Visible = False
+        '
+        'lblTueSH
+        '
+        Me.lblTueSH.AutoSize = True
+        Me.lblTueSH.Location = New System.Drawing.Point(1247, 268)
+        Me.lblTueSH.Name = "lblTueSH"
+        Me.lblTueSH.Size = New System.Drawing.Size(23, 25)
+        Me.lblTueSH.TabIndex = 86
+        Me.lblTueSH.Text = "0"
+        Me.lblTueSH.Visible = False
+        '
+        'lblTueRH
+        '
+        Me.lblTueRH.AutoSize = True
+        Me.lblTueRH.Location = New System.Drawing.Point(1146, 268)
+        Me.lblTueRH.Name = "lblTueRH"
+        Me.lblTueRH.Size = New System.Drawing.Size(23, 25)
+        Me.lblTueRH.TabIndex = 85
+        Me.lblTueRH.Text = "0"
+        Me.lblTueRH.Visible = False
+        '
+        'lblMonSH
+        '
+        Me.lblMonSH.AutoSize = True
+        Me.lblMonSH.Location = New System.Drawing.Point(1247, 214)
+        Me.lblMonSH.Name = "lblMonSH"
+        Me.lblMonSH.Size = New System.Drawing.Size(23, 25)
+        Me.lblMonSH.TabIndex = 84
+        Me.lblMonSH.Text = "0"
+        Me.lblMonSH.Visible = False
+        '
+        'lblMonRH
+        '
+        Me.lblMonRH.AutoSize = True
+        Me.lblMonRH.Location = New System.Drawing.Point(1146, 214)
+        Me.lblMonRH.Name = "lblMonRH"
+        Me.lblMonRH.Size = New System.Drawing.Size(23, 25)
+        Me.lblMonRH.TabIndex = 83
+        Me.lblMonRH.Text = "0"
+        Me.lblMonRH.Visible = False
+        '
+        'lblSunSH
+        '
+        Me.lblSunSH.AutoSize = True
+        Me.lblSunSH.Location = New System.Drawing.Point(1247, 163)
+        Me.lblSunSH.Name = "lblSunSH"
+        Me.lblSunSH.Size = New System.Drawing.Size(23, 25)
+        Me.lblSunSH.TabIndex = 82
+        Me.lblSunSH.Text = "0"
+        Me.lblSunSH.Visible = False
+        '
+        'lblSunRH
+        '
+        Me.lblSunRH.AutoSize = True
+        Me.lblSunRH.Location = New System.Drawing.Point(1146, 163)
+        Me.lblSunRH.Name = "lblSunRH"
+        Me.lblSunRH.Size = New System.Drawing.Size(23, 25)
+        Me.lblSunRH.TabIndex = 81
+        Me.lblSunRH.Text = "0"
+        Me.lblSunRH.Visible = False
+        '
+        'lblSatSH
+        '
+        Me.lblSatSH.AutoSize = True
+        Me.lblSatSH.Location = New System.Drawing.Point(1247, 113)
+        Me.lblSatSH.Name = "lblSatSH"
+        Me.lblSatSH.Size = New System.Drawing.Size(23, 25)
+        Me.lblSatSH.TabIndex = 80
+        Me.lblSatSH.Text = "0"
+        Me.lblSatSH.Visible = False
+        '
+        'lblSatRH
+        '
+        Me.lblSatRH.AutoSize = True
+        Me.lblSatRH.Location = New System.Drawing.Point(1146, 113)
+        Me.lblSatRH.Name = "lblSatRH"
+        Me.lblSatRH.Size = New System.Drawing.Size(23, 25)
+        Me.lblSatRH.TabIndex = 79
+        Me.lblSatRH.Text = "0"
+        Me.lblSatRH.Visible = False
+        '
+        'lblFriSH
+        '
+        Me.lblFriSH.AutoSize = True
+        Me.lblFriSH.Location = New System.Drawing.Point(1247, 54)
+        Me.lblFriSH.Name = "lblFriSH"
+        Me.lblFriSH.Size = New System.Drawing.Size(23, 25)
+        Me.lblFriSH.TabIndex = 78
+        Me.lblFriSH.Text = "0"
+        Me.lblFriSH.Visible = False
+        '
+        'lblFriRH
+        '
+        Me.lblFriRH.AutoSize = True
+        Me.lblFriRH.Location = New System.Drawing.Point(1146, 54)
+        Me.lblFriRH.Name = "lblFriRH"
+        Me.lblFriRH.Size = New System.Drawing.Size(23, 25)
+        Me.lblFriRH.TabIndex = 77
+        Me.lblFriRH.Text = "0"
+        Me.lblFriRH.Visible = False
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(1247, 1)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(82, 50)
+        Me.Label21.TabIndex = 76
+        Me.Label21.Text = "Special Holiday"
         '
         'Label68
         '
         Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(332, 1)
+        Me.Label68.Location = New System.Drawing.Point(357, 1)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(80, 25)
         Me.Label68.TabIndex = 45
@@ -328,7 +523,7 @@ Partial Class frmTimesheet
         'Label69
         '
         Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(522, 1)
+        Me.Label69.Location = New System.Drawing.Point(546, 1)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(93, 25)
         Me.Label69.TabIndex = 46
@@ -337,7 +532,7 @@ Partial Class frmTimesheet
         'lbThuUM
         '
         Me.lbThuUM.AutoSize = True
-        Me.lbThuUM.Location = New System.Drawing.Point(959, 375)
+        Me.lbThuUM.Location = New System.Drawing.Point(1073, 375)
         Me.lbThuUM.Name = "lbThuUM"
         Me.lbThuUM.Size = New System.Drawing.Size(23, 25)
         Me.lbThuUM.TabIndex = 51
@@ -347,7 +542,7 @@ Partial Class frmTimesheet
         'lbThuUH
         '
         Me.lbThuUH.AutoSize = True
-        Me.lbThuUH.Location = New System.Drawing.Point(910, 375)
+        Me.lbThuUH.Location = New System.Drawing.Point(1005, 375)
         Me.lbThuUH.Name = "lbThuUH"
         Me.lbThuUH.Size = New System.Drawing.Size(23, 25)
         Me.lbThuUH.TabIndex = 51
@@ -357,7 +552,7 @@ Partial Class frmTimesheet
         'lbThuLM
         '
         Me.lbThuLM.AutoSize = True
-        Me.lbThuLM.Location = New System.Drawing.Point(848, 375)
+        Me.lbThuLM.Location = New System.Drawing.Point(928, 375)
         Me.lbThuLM.Name = "lbThuLM"
         Me.lbThuLM.Size = New System.Drawing.Size(23, 25)
         Me.lbThuLM.TabIndex = 52
@@ -367,7 +562,7 @@ Partial Class frmTimesheet
         'lbThuLH
         '
         Me.lbThuLH.AutoSize = True
-        Me.lbThuLH.Location = New System.Drawing.Point(804, 375)
+        Me.lbThuLH.Location = New System.Drawing.Point(869, 375)
         Me.lbThuLH.Name = "lbThuLH"
         Me.lbThuLH.Size = New System.Drawing.Size(23, 25)
         Me.lbThuLH.TabIndex = 51
@@ -377,7 +572,7 @@ Partial Class frmTimesheet
         'lbThuOM
         '
         Me.lbThuOM.AutoSize = True
-        Me.lbThuOM.Location = New System.Drawing.Point(739, 375)
+        Me.lbThuOM.Location = New System.Drawing.Point(792, 375)
         Me.lbThuOM.Name = "lbThuOM"
         Me.lbThuOM.Size = New System.Drawing.Size(23, 25)
         Me.lbThuOM.TabIndex = 52
@@ -387,7 +582,7 @@ Partial Class frmTimesheet
         'lbThuOH
         '
         Me.lbThuOH.AutoSize = True
-        Me.lbThuOH.Location = New System.Drawing.Point(690, 375)
+        Me.lbThuOH.Location = New System.Drawing.Point(729, 375)
         Me.lbThuOH.Name = "lbThuOH"
         Me.lbThuOH.Size = New System.Drawing.Size(23, 25)
         Me.lbThuOH.TabIndex = 53
@@ -397,7 +592,7 @@ Partial Class frmTimesheet
         'lbWedUM
         '
         Me.lbWedUM.AutoSize = True
-        Me.lbWedUM.Location = New System.Drawing.Point(959, 320)
+        Me.lbWedUM.Location = New System.Drawing.Point(1073, 320)
         Me.lbWedUM.Name = "lbWedUM"
         Me.lbWedUM.Size = New System.Drawing.Size(23, 25)
         Me.lbWedUM.TabIndex = 64
@@ -407,7 +602,7 @@ Partial Class frmTimesheet
         'lbWedLM
         '
         Me.lbWedLM.AutoSize = True
-        Me.lbWedLM.Location = New System.Drawing.Point(848, 320)
+        Me.lbWedLM.Location = New System.Drawing.Point(928, 320)
         Me.lbWedLM.Name = "lbWedLM"
         Me.lbWedLM.Size = New System.Drawing.Size(23, 25)
         Me.lbWedLM.TabIndex = 69
@@ -417,7 +612,7 @@ Partial Class frmTimesheet
         'lbWedUH
         '
         Me.lbWedUH.AutoSize = True
-        Me.lbWedUH.Location = New System.Drawing.Point(910, 320)
+        Me.lbWedUH.Location = New System.Drawing.Point(1005, 320)
         Me.lbWedUH.Name = "lbWedUH"
         Me.lbWedUH.Size = New System.Drawing.Size(23, 25)
         Me.lbWedUH.TabIndex = 70
@@ -427,7 +622,7 @@ Partial Class frmTimesheet
         'lbWedLH
         '
         Me.lbWedLH.AutoSize = True
-        Me.lbWedLH.Location = New System.Drawing.Point(804, 320)
+        Me.lbWedLH.Location = New System.Drawing.Point(869, 320)
         Me.lbWedLH.Name = "lbWedLH"
         Me.lbWedLH.Size = New System.Drawing.Size(23, 25)
         Me.lbWedLH.TabIndex = 65
@@ -437,7 +632,7 @@ Partial Class frmTimesheet
         'lbTueUM
         '
         Me.lbTueUM.AutoSize = True
-        Me.lbTueUM.Location = New System.Drawing.Point(959, 268)
+        Me.lbTueUM.Location = New System.Drawing.Point(1073, 268)
         Me.lbTueUM.Name = "lbTueUM"
         Me.lbTueUM.Size = New System.Drawing.Size(23, 25)
         Me.lbTueUM.TabIndex = 66
@@ -447,7 +642,7 @@ Partial Class frmTimesheet
         'lbWedOM
         '
         Me.lbWedOM.AutoSize = True
-        Me.lbWedOM.Location = New System.Drawing.Point(739, 320)
+        Me.lbWedOM.Location = New System.Drawing.Point(792, 320)
         Me.lbWedOM.Name = "lbWedOM"
         Me.lbWedOM.Size = New System.Drawing.Size(23, 25)
         Me.lbWedOM.TabIndex = 67
@@ -457,7 +652,7 @@ Partial Class frmTimesheet
         'lbWedOH
         '
         Me.lbWedOH.AutoSize = True
-        Me.lbWedOH.Location = New System.Drawing.Point(690, 320)
+        Me.lbWedOH.Location = New System.Drawing.Point(729, 320)
         Me.lbWedOH.Name = "lbWedOH"
         Me.lbWedOH.Size = New System.Drawing.Size(23, 25)
         Me.lbWedOH.TabIndex = 68
@@ -467,7 +662,7 @@ Partial Class frmTimesheet
         'lbTueUH
         '
         Me.lbTueUH.AutoSize = True
-        Me.lbTueUH.Location = New System.Drawing.Point(910, 268)
+        Me.lbTueUH.Location = New System.Drawing.Point(1005, 268)
         Me.lbTueUH.Name = "lbTueUH"
         Me.lbTueUH.Size = New System.Drawing.Size(23, 25)
         Me.lbTueUH.TabIndex = 71
@@ -477,7 +672,7 @@ Partial Class frmTimesheet
         'lbTueLM
         '
         Me.lbTueLM.AutoSize = True
-        Me.lbTueLM.Location = New System.Drawing.Point(848, 268)
+        Me.lbTueLM.Location = New System.Drawing.Point(928, 268)
         Me.lbTueLM.Name = "lbTueLM"
         Me.lbTueLM.Size = New System.Drawing.Size(23, 25)
         Me.lbTueLM.TabIndex = 72
@@ -487,7 +682,7 @@ Partial Class frmTimesheet
         'lbTueLH
         '
         Me.lbTueLH.AutoSize = True
-        Me.lbTueLH.Location = New System.Drawing.Point(804, 268)
+        Me.lbTueLH.Location = New System.Drawing.Point(869, 268)
         Me.lbTueLH.Name = "lbTueLH"
         Me.lbTueLH.Size = New System.Drawing.Size(23, 25)
         Me.lbTueLH.TabIndex = 73
@@ -497,7 +692,7 @@ Partial Class frmTimesheet
         'lbTueOM
         '
         Me.lbTueOM.AutoSize = True
-        Me.lbTueOM.Location = New System.Drawing.Point(739, 268)
+        Me.lbTueOM.Location = New System.Drawing.Point(792, 268)
         Me.lbTueOM.Name = "lbTueOM"
         Me.lbTueOM.Size = New System.Drawing.Size(23, 25)
         Me.lbTueOM.TabIndex = 74
@@ -507,7 +702,7 @@ Partial Class frmTimesheet
         'lbTueOH
         '
         Me.lbTueOH.AutoSize = True
-        Me.lbTueOH.Location = New System.Drawing.Point(690, 268)
+        Me.lbTueOH.Location = New System.Drawing.Point(729, 268)
         Me.lbTueOH.Name = "lbTueOH"
         Me.lbTueOH.Size = New System.Drawing.Size(23, 25)
         Me.lbTueOH.TabIndex = 51
@@ -517,7 +712,7 @@ Partial Class frmTimesheet
         'lbMonUM
         '
         Me.lbMonUM.AutoSize = True
-        Me.lbMonUM.Location = New System.Drawing.Point(959, 214)
+        Me.lbMonUM.Location = New System.Drawing.Point(1073, 214)
         Me.lbMonUM.Name = "lbMonUM"
         Me.lbMonUM.Size = New System.Drawing.Size(23, 25)
         Me.lbMonUM.TabIndex = 52
@@ -527,7 +722,7 @@ Partial Class frmTimesheet
         'lbMonUH
         '
         Me.lbMonUH.AutoSize = True
-        Me.lbMonUH.Location = New System.Drawing.Point(910, 214)
+        Me.lbMonUH.Location = New System.Drawing.Point(1005, 214)
         Me.lbMonUH.Name = "lbMonUH"
         Me.lbMonUH.Size = New System.Drawing.Size(23, 25)
         Me.lbMonUH.TabIndex = 53
@@ -537,7 +732,7 @@ Partial Class frmTimesheet
         'lbMonLM
         '
         Me.lbMonLM.AutoSize = True
-        Me.lbMonLM.Location = New System.Drawing.Point(848, 214)
+        Me.lbMonLM.Location = New System.Drawing.Point(928, 214)
         Me.lbMonLM.Name = "lbMonLM"
         Me.lbMonLM.Size = New System.Drawing.Size(23, 25)
         Me.lbMonLM.TabIndex = 54
@@ -547,7 +742,7 @@ Partial Class frmTimesheet
         'lbMonLH
         '
         Me.lbMonLH.AutoSize = True
-        Me.lbMonLH.Location = New System.Drawing.Point(804, 214)
+        Me.lbMonLH.Location = New System.Drawing.Point(869, 214)
         Me.lbMonLH.Name = "lbMonLH"
         Me.lbMonLH.Size = New System.Drawing.Size(23, 25)
         Me.lbMonLH.TabIndex = 55
@@ -557,7 +752,7 @@ Partial Class frmTimesheet
         'lbMonOM
         '
         Me.lbMonOM.AutoSize = True
-        Me.lbMonOM.Location = New System.Drawing.Point(739, 214)
+        Me.lbMonOM.Location = New System.Drawing.Point(792, 214)
         Me.lbMonOM.Name = "lbMonOM"
         Me.lbMonOM.Size = New System.Drawing.Size(23, 25)
         Me.lbMonOM.TabIndex = 56
@@ -567,7 +762,7 @@ Partial Class frmTimesheet
         'lbMonOH
         '
         Me.lbMonOH.AutoSize = True
-        Me.lbMonOH.Location = New System.Drawing.Point(690, 214)
+        Me.lbMonOH.Location = New System.Drawing.Point(729, 214)
         Me.lbMonOH.Name = "lbMonOH"
         Me.lbMonOH.Size = New System.Drawing.Size(23, 25)
         Me.lbMonOH.TabIndex = 57
@@ -577,7 +772,7 @@ Partial Class frmTimesheet
         'lbSunUM
         '
         Me.lbSunUM.AutoSize = True
-        Me.lbSunUM.Location = New System.Drawing.Point(959, 163)
+        Me.lbSunUM.Location = New System.Drawing.Point(1073, 163)
         Me.lbSunUM.Name = "lbSunUM"
         Me.lbSunUM.Size = New System.Drawing.Size(23, 25)
         Me.lbSunUM.TabIndex = 58
@@ -587,7 +782,7 @@ Partial Class frmTimesheet
         'lbSunUH
         '
         Me.lbSunUH.AutoSize = True
-        Me.lbSunUH.Location = New System.Drawing.Point(910, 163)
+        Me.lbSunUH.Location = New System.Drawing.Point(1005, 163)
         Me.lbSunUH.Name = "lbSunUH"
         Me.lbSunUH.Size = New System.Drawing.Size(23, 25)
         Me.lbSunUH.TabIndex = 59
@@ -597,7 +792,7 @@ Partial Class frmTimesheet
         'lbSunLM
         '
         Me.lbSunLM.AutoSize = True
-        Me.lbSunLM.Location = New System.Drawing.Point(848, 163)
+        Me.lbSunLM.Location = New System.Drawing.Point(928, 163)
         Me.lbSunLM.Name = "lbSunLM"
         Me.lbSunLM.Size = New System.Drawing.Size(23, 25)
         Me.lbSunLM.TabIndex = 60
@@ -607,7 +802,7 @@ Partial Class frmTimesheet
         'lbSunLH
         '
         Me.lbSunLH.AutoSize = True
-        Me.lbSunLH.Location = New System.Drawing.Point(804, 163)
+        Me.lbSunLH.Location = New System.Drawing.Point(869, 163)
         Me.lbSunLH.Name = "lbSunLH"
         Me.lbSunLH.Size = New System.Drawing.Size(23, 25)
         Me.lbSunLH.TabIndex = 61
@@ -617,7 +812,7 @@ Partial Class frmTimesheet
         'lbSunOM
         '
         Me.lbSunOM.AutoSize = True
-        Me.lbSunOM.Location = New System.Drawing.Point(739, 163)
+        Me.lbSunOM.Location = New System.Drawing.Point(792, 163)
         Me.lbSunOM.Name = "lbSunOM"
         Me.lbSunOM.Size = New System.Drawing.Size(23, 25)
         Me.lbSunOM.TabIndex = 62
@@ -627,7 +822,7 @@ Partial Class frmTimesheet
         'lbSunOH
         '
         Me.lbSunOH.AutoSize = True
-        Me.lbSunOH.Location = New System.Drawing.Point(690, 163)
+        Me.lbSunOH.Location = New System.Drawing.Point(729, 163)
         Me.lbSunOH.Name = "lbSunOH"
         Me.lbSunOH.Size = New System.Drawing.Size(23, 25)
         Me.lbSunOH.TabIndex = 63
@@ -637,7 +832,7 @@ Partial Class frmTimesheet
         'lbSatUM
         '
         Me.lbSatUM.AutoSize = True
-        Me.lbSatUM.Location = New System.Drawing.Point(959, 113)
+        Me.lbSatUM.Location = New System.Drawing.Point(1073, 113)
         Me.lbSatUM.Name = "lbSatUM"
         Me.lbSatUM.Size = New System.Drawing.Size(23, 25)
         Me.lbSatUM.TabIndex = 50
@@ -647,7 +842,7 @@ Partial Class frmTimesheet
         'lbSatUH
         '
         Me.lbSatUH.AutoSize = True
-        Me.lbSatUH.Location = New System.Drawing.Point(910, 113)
+        Me.lbSatUH.Location = New System.Drawing.Point(1005, 113)
         Me.lbSatUH.Name = "lbSatUH"
         Me.lbSatUH.Size = New System.Drawing.Size(23, 25)
         Me.lbSatUH.TabIndex = 51
@@ -657,7 +852,7 @@ Partial Class frmTimesheet
         'lbSatLM
         '
         Me.lbSatLM.AutoSize = True
-        Me.lbSatLM.Location = New System.Drawing.Point(848, 113)
+        Me.lbSatLM.Location = New System.Drawing.Point(928, 113)
         Me.lbSatLM.Name = "lbSatLM"
         Me.lbSatLM.Size = New System.Drawing.Size(23, 25)
         Me.lbSatLM.TabIndex = 52
@@ -667,7 +862,7 @@ Partial Class frmTimesheet
         'lbSatLH
         '
         Me.lbSatLH.AutoSize = True
-        Me.lbSatLH.Location = New System.Drawing.Point(804, 113)
+        Me.lbSatLH.Location = New System.Drawing.Point(869, 113)
         Me.lbSatLH.Name = "lbSatLH"
         Me.lbSatLH.Size = New System.Drawing.Size(23, 25)
         Me.lbSatLH.TabIndex = 53
@@ -677,7 +872,7 @@ Partial Class frmTimesheet
         'lbSatOM
         '
         Me.lbSatOM.AutoSize = True
-        Me.lbSatOM.Location = New System.Drawing.Point(739, 113)
+        Me.lbSatOM.Location = New System.Drawing.Point(792, 113)
         Me.lbSatOM.Name = "lbSatOM"
         Me.lbSatOM.Size = New System.Drawing.Size(23, 25)
         Me.lbSatOM.TabIndex = 54
@@ -687,7 +882,7 @@ Partial Class frmTimesheet
         'lbSatOH
         '
         Me.lbSatOH.AutoSize = True
-        Me.lbSatOH.Location = New System.Drawing.Point(690, 113)
+        Me.lbSatOH.Location = New System.Drawing.Point(729, 113)
         Me.lbSatOH.Name = "lbSatOH"
         Me.lbSatOH.Size = New System.Drawing.Size(23, 25)
         Me.lbSatOH.TabIndex = 55
@@ -697,7 +892,7 @@ Partial Class frmTimesheet
         'lbFriUM
         '
         Me.lbFriUM.AutoSize = True
-        Me.lbFriUM.Location = New System.Drawing.Point(959, 54)
+        Me.lbFriUM.Location = New System.Drawing.Point(1073, 54)
         Me.lbFriUM.Name = "lbFriUM"
         Me.lbFriUM.Size = New System.Drawing.Size(23, 25)
         Me.lbFriUM.TabIndex = 56
@@ -707,7 +902,7 @@ Partial Class frmTimesheet
         'lbFriUH
         '
         Me.lbFriUH.AutoSize = True
-        Me.lbFriUH.Location = New System.Drawing.Point(910, 54)
+        Me.lbFriUH.Location = New System.Drawing.Point(1005, 54)
         Me.lbFriUH.Name = "lbFriUH"
         Me.lbFriUH.Size = New System.Drawing.Size(23, 25)
         Me.lbFriUH.TabIndex = 57
@@ -717,7 +912,7 @@ Partial Class frmTimesheet
         'lbFriLM
         '
         Me.lbFriLM.AutoSize = True
-        Me.lbFriLM.Location = New System.Drawing.Point(848, 54)
+        Me.lbFriLM.Location = New System.Drawing.Point(928, 54)
         Me.lbFriLM.Name = "lbFriLM"
         Me.lbFriLM.Size = New System.Drawing.Size(23, 25)
         Me.lbFriLM.TabIndex = 58
@@ -727,7 +922,7 @@ Partial Class frmTimesheet
         'lbFriLH
         '
         Me.lbFriLH.AutoSize = True
-        Me.lbFriLH.Location = New System.Drawing.Point(804, 54)
+        Me.lbFriLH.Location = New System.Drawing.Point(869, 54)
         Me.lbFriLH.Name = "lbFriLH"
         Me.lbFriLH.Size = New System.Drawing.Size(23, 25)
         Me.lbFriLH.TabIndex = 59
@@ -737,7 +932,7 @@ Partial Class frmTimesheet
         'lbFriOM
         '
         Me.lbFriOM.AutoSize = True
-        Me.lbFriOM.Location = New System.Drawing.Point(739, 54)
+        Me.lbFriOM.Location = New System.Drawing.Point(792, 54)
         Me.lbFriOM.Name = "lbFriOM"
         Me.lbFriOM.Size = New System.Drawing.Size(23, 25)
         Me.lbFriOM.TabIndex = 60
@@ -747,7 +942,7 @@ Partial Class frmTimesheet
         'lbFriOH
         '
         Me.lbFriOH.AutoSize = True
-        Me.lbFriOH.Location = New System.Drawing.Point(690, 54)
+        Me.lbFriOH.Location = New System.Drawing.Point(729, 54)
         Me.lbFriOH.Name = "lbFriOH"
         Me.lbFriOH.Size = New System.Drawing.Size(23, 25)
         Me.lbFriOH.TabIndex = 43
@@ -758,7 +953,7 @@ Partial Class frmTimesheet
         '
         Me.Label25.AutoSize = True
         Me.TableLayoutPanel1.SetColumnSpan(Me.Label25, 2)
-        Me.Label25.Location = New System.Drawing.Point(910, 1)
+        Me.Label25.Location = New System.Drawing.Point(1005, 1)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(101, 50)
         Me.Label25.TabIndex = 45
@@ -768,7 +963,7 @@ Partial Class frmTimesheet
         'lblFriDate
         '
         Me.lblFriDate.AutoSize = True
-        Me.lblFriDate.Location = New System.Drawing.Point(190, 54)
+        Me.lblFriDate.Location = New System.Drawing.Point(191, 54)
         Me.lblFriDate.Name = "lblFriDate"
         Me.lblFriDate.Size = New System.Drawing.Size(50, 25)
         Me.lblFriDate.TabIndex = 43
@@ -778,7 +973,7 @@ Partial Class frmTimesheet
         '
         Me.Label24.AutoSize = True
         Me.TableLayoutPanel1.SetColumnSpan(Me.Label24, 2)
-        Me.Label24.Location = New System.Drawing.Point(804, 1)
+        Me.Label24.Location = New System.Drawing.Point(869, 1)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(76, 50)
         Me.Label24.TabIndex = 44
@@ -788,7 +983,7 @@ Partial Class frmTimesheet
         'lblSatDate
         '
         Me.lblSatDate.AutoSize = True
-        Me.lblSatDate.Location = New System.Drawing.Point(190, 113)
+        Me.lblSatDate.Location = New System.Drawing.Point(191, 113)
         Me.lblSatDate.Name = "lblSatDate"
         Me.lblSatDate.Size = New System.Drawing.Size(50, 25)
         Me.lblSatDate.TabIndex = 44
@@ -798,7 +993,7 @@ Partial Class frmTimesheet
         '
         Me.Label23.AutoSize = True
         Me.TableLayoutPanel1.SetColumnSpan(Me.Label23, 2)
-        Me.Label23.Location = New System.Drawing.Point(690, 1)
+        Me.Label23.Location = New System.Drawing.Point(729, 1)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(91, 50)
         Me.Label23.TabIndex = 43
@@ -808,7 +1003,7 @@ Partial Class frmTimesheet
         'lblSunDate
         '
         Me.lblSunDate.AutoSize = True
-        Me.lblSunDate.Location = New System.Drawing.Point(190, 163)
+        Me.lblSunDate.Location = New System.Drawing.Point(191, 163)
         Me.lblSunDate.Name = "lblSunDate"
         Me.lblSunDate.Size = New System.Drawing.Size(50, 25)
         Me.lblSunDate.TabIndex = 45
@@ -817,7 +1012,7 @@ Partial Class frmTimesheet
         'lblMonDate
         '
         Me.lblMonDate.AutoSize = True
-        Me.lblMonDate.Location = New System.Drawing.Point(190, 214)
+        Me.lblMonDate.Location = New System.Drawing.Point(191, 214)
         Me.lblMonDate.Name = "lblMonDate"
         Me.lblMonDate.Size = New System.Drawing.Size(50, 25)
         Me.lblMonDate.TabIndex = 46
@@ -826,7 +1021,7 @@ Partial Class frmTimesheet
         'lblTueDate
         '
         Me.lblTueDate.AutoSize = True
-        Me.lblTueDate.Location = New System.Drawing.Point(190, 268)
+        Me.lblTueDate.Location = New System.Drawing.Point(191, 268)
         Me.lblTueDate.Name = "lblTueDate"
         Me.lblTueDate.Size = New System.Drawing.Size(50, 25)
         Me.lblTueDate.TabIndex = 47
@@ -835,7 +1030,7 @@ Partial Class frmTimesheet
         'lblWedDate
         '
         Me.lblWedDate.AutoSize = True
-        Me.lblWedDate.Location = New System.Drawing.Point(190, 320)
+        Me.lblWedDate.Location = New System.Drawing.Point(191, 320)
         Me.lblWedDate.Name = "lblWedDate"
         Me.lblWedDate.Size = New System.Drawing.Size(50, 25)
         Me.lblWedDate.TabIndex = 48
@@ -844,7 +1039,7 @@ Partial Class frmTimesheet
         'lblThuDate
         '
         Me.lblThuDate.AutoSize = True
-        Me.lblThuDate.Location = New System.Drawing.Point(190, 375)
+        Me.lblThuDate.Location = New System.Drawing.Point(191, 375)
         Me.lblThuDate.Name = "lblThuDate"
         Me.lblThuDate.Size = New System.Drawing.Size(50, 25)
         Me.lblThuDate.TabIndex = 49
@@ -853,7 +1048,7 @@ Partial Class frmTimesheet
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(190, 1)
+        Me.Label15.Location = New System.Drawing.Point(191, 1)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(53, 25)
         Me.Label15.TabIndex = 44
@@ -862,7 +1057,7 @@ Partial Class frmTimesheet
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(50, 1)
+        Me.Label14.Location = New System.Drawing.Point(55, 1)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(119, 25)
         Me.Label14.TabIndex = 43
@@ -884,14 +1079,14 @@ Partial Class frmTimesheet
         Me.chkFri.Dock = System.Windows.Forms.DockStyle.Top
         Me.chkFri.Location = New System.Drawing.Point(4, 57)
         Me.chkFri.Name = "chkFri"
-        Me.chkFri.Size = New System.Drawing.Size(39, 21)
+        Me.chkFri.Size = New System.Drawing.Size(44, 21)
         Me.chkFri.TabIndex = 5
         Me.chkFri.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(50, 54)
+        Me.Label2.Location = New System.Drawing.Point(55, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 25)
         Me.Label2.TabIndex = 12
@@ -901,10 +1096,10 @@ Partial Class frmTimesheet
         '
         Me.cmbFriIn.CustomFormat = "hh:mm tt"
         Me.cmbFriIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbFriIn.Location = New System.Drawing.Point(332, 57)
+        Me.cmbFriIn.Location = New System.Drawing.Point(357, 57)
         Me.cmbFriIn.Name = "cmbFriIn"
         Me.cmbFriIn.ShowUpDown = True
-        Me.cmbFriIn.Size = New System.Drawing.Size(183, 30)
+        Me.cmbFriIn.Size = New System.Drawing.Size(182, 30)
         Me.cmbFriIn.TabIndex = 6
         Me.cmbFriIn.Value = New Date(2020, 3, 16, 8, 0, 0, 0)
         '
@@ -912,7 +1107,7 @@ Partial Class frmTimesheet
         '
         Me.cmbThuOut.CustomFormat = "hh:mm tt"
         Me.cmbThuOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbThuOut.Location = New System.Drawing.Point(522, 378)
+        Me.cmbThuOut.Location = New System.Drawing.Point(546, 378)
         Me.cmbThuOut.Name = "cmbThuOut"
         Me.cmbThuOut.ShowUpDown = True
         Me.cmbThuOut.Size = New System.Drawing.Size(161, 30)
@@ -923,10 +1118,10 @@ Partial Class frmTimesheet
         '
         Me.cmbThuIn.CustomFormat = "hh:mm tt"
         Me.cmbThuIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbThuIn.Location = New System.Drawing.Point(332, 378)
+        Me.cmbThuIn.Location = New System.Drawing.Point(357, 378)
         Me.cmbThuIn.Name = "cmbThuIn"
         Me.cmbThuIn.ShowUpDown = True
-        Me.cmbThuIn.Size = New System.Drawing.Size(183, 30)
+        Me.cmbThuIn.Size = New System.Drawing.Size(182, 30)
         Me.cmbThuIn.TabIndex = 24
         Me.cmbThuIn.Value = New Date(2020, 3, 16, 8, 0, 0, 0)
         '
@@ -934,10 +1129,10 @@ Partial Class frmTimesheet
         '
         Me.cmbSunIn.CustomFormat = "hh:mm tt"
         Me.cmbSunIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbSunIn.Location = New System.Drawing.Point(332, 166)
+        Me.cmbSunIn.Location = New System.Drawing.Point(357, 166)
         Me.cmbSunIn.Name = "cmbSunIn"
         Me.cmbSunIn.ShowUpDown = True
-        Me.cmbSunIn.Size = New System.Drawing.Size(183, 30)
+        Me.cmbSunIn.Size = New System.Drawing.Size(182, 30)
         Me.cmbSunIn.TabIndex = 12
         Me.cmbSunIn.Value = New Date(2020, 3, 16, 8, 0, 0, 0)
         '
@@ -945,7 +1140,7 @@ Partial Class frmTimesheet
         '
         Me.cmbSunOut.CustomFormat = "hh:mm tt"
         Me.cmbSunOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbSunOut.Location = New System.Drawing.Point(522, 166)
+        Me.cmbSunOut.Location = New System.Drawing.Point(546, 166)
         Me.cmbSunOut.Name = "cmbSunOut"
         Me.cmbSunOut.ShowUpDown = True
         Me.cmbSunOut.Size = New System.Drawing.Size(161, 30)
@@ -956,7 +1151,7 @@ Partial Class frmTimesheet
         '
         Me.cmbWedOut.CustomFormat = "hh:mm tt"
         Me.cmbWedOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbWedOut.Location = New System.Drawing.Point(522, 323)
+        Me.cmbWedOut.Location = New System.Drawing.Point(546, 323)
         Me.cmbWedOut.Name = "cmbWedOut"
         Me.cmbWedOut.ShowUpDown = True
         Me.cmbWedOut.Size = New System.Drawing.Size(161, 30)
@@ -967,10 +1162,10 @@ Partial Class frmTimesheet
         '
         Me.cmbWedIn.CustomFormat = "hh:mm tt"
         Me.cmbWedIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbWedIn.Location = New System.Drawing.Point(332, 323)
+        Me.cmbWedIn.Location = New System.Drawing.Point(357, 323)
         Me.cmbWedIn.Name = "cmbWedIn"
         Me.cmbWedIn.ShowUpDown = True
-        Me.cmbWedIn.Size = New System.Drawing.Size(183, 30)
+        Me.cmbWedIn.Size = New System.Drawing.Size(182, 30)
         Me.cmbWedIn.TabIndex = 21
         Me.cmbWedIn.Value = New Date(2020, 3, 16, 8, 0, 0, 0)
         '
@@ -978,7 +1173,7 @@ Partial Class frmTimesheet
         '
         Me.cmbTueOut.CustomFormat = "hh:mm tt"
         Me.cmbTueOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbTueOut.Location = New System.Drawing.Point(522, 271)
+        Me.cmbTueOut.Location = New System.Drawing.Point(546, 271)
         Me.cmbTueOut.Name = "cmbTueOut"
         Me.cmbTueOut.ShowUpDown = True
         Me.cmbTueOut.Size = New System.Drawing.Size(161, 30)
@@ -989,7 +1184,7 @@ Partial Class frmTimesheet
         '
         Me.cmbMonOut.CustomFormat = "hh:mm tt"
         Me.cmbMonOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbMonOut.Location = New System.Drawing.Point(522, 217)
+        Me.cmbMonOut.Location = New System.Drawing.Point(546, 217)
         Me.cmbMonOut.Name = "cmbMonOut"
         Me.cmbMonOut.ShowUpDown = True
         Me.cmbMonOut.Size = New System.Drawing.Size(161, 30)
@@ -1000,7 +1195,7 @@ Partial Class frmTimesheet
         '
         Me.cmbSatOut.CustomFormat = "hh:mm tt"
         Me.cmbSatOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbSatOut.Location = New System.Drawing.Point(522, 116)
+        Me.cmbSatOut.Location = New System.Drawing.Point(546, 116)
         Me.cmbSatOut.Name = "cmbSatOut"
         Me.cmbSatOut.ShowUpDown = True
         Me.cmbSatOut.Size = New System.Drawing.Size(161, 30)
@@ -1011,10 +1206,10 @@ Partial Class frmTimesheet
         '
         Me.cmbTueIn.CustomFormat = "hh:mm tt"
         Me.cmbTueIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbTueIn.Location = New System.Drawing.Point(332, 271)
+        Me.cmbTueIn.Location = New System.Drawing.Point(357, 271)
         Me.cmbTueIn.Name = "cmbTueIn"
         Me.cmbTueIn.ShowUpDown = True
-        Me.cmbTueIn.Size = New System.Drawing.Size(183, 30)
+        Me.cmbTueIn.Size = New System.Drawing.Size(182, 30)
         Me.cmbTueIn.TabIndex = 18
         Me.cmbTueIn.Value = New Date(2020, 3, 16, 8, 0, 0, 0)
         '
@@ -1022,10 +1217,10 @@ Partial Class frmTimesheet
         '
         Me.cmbMonIn.CustomFormat = "hh:mm tt"
         Me.cmbMonIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbMonIn.Location = New System.Drawing.Point(332, 217)
+        Me.cmbMonIn.Location = New System.Drawing.Point(357, 217)
         Me.cmbMonIn.Name = "cmbMonIn"
         Me.cmbMonIn.ShowUpDown = True
-        Me.cmbMonIn.Size = New System.Drawing.Size(183, 30)
+        Me.cmbMonIn.Size = New System.Drawing.Size(182, 30)
         Me.cmbMonIn.TabIndex = 15
         Me.cmbMonIn.Value = New Date(2020, 3, 16, 8, 0, 0, 0)
         '
@@ -1033,10 +1228,10 @@ Partial Class frmTimesheet
         '
         Me.cmbSatIn.CustomFormat = "hh:mm tt"
         Me.cmbSatIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbSatIn.Location = New System.Drawing.Point(332, 116)
+        Me.cmbSatIn.Location = New System.Drawing.Point(357, 116)
         Me.cmbSatIn.Name = "cmbSatIn"
         Me.cmbSatIn.ShowUpDown = True
-        Me.cmbSatIn.Size = New System.Drawing.Size(183, 30)
+        Me.cmbSatIn.Size = New System.Drawing.Size(182, 30)
         Me.cmbSatIn.TabIndex = 9
         Me.cmbSatIn.Value = New Date(2020, 3, 16, 8, 0, 0, 0)
         '
@@ -1044,7 +1239,7 @@ Partial Class frmTimesheet
         '
         Me.cmbFriOut.CustomFormat = "hh:mm tt"
         Me.cmbFriOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.cmbFriOut.Location = New System.Drawing.Point(522, 57)
+        Me.cmbFriOut.Location = New System.Drawing.Point(546, 57)
         Me.cmbFriOut.Name = "cmbFriOut"
         Me.cmbFriOut.ShowUpDown = True
         Me.cmbFriOut.Size = New System.Drawing.Size(161, 30)
@@ -1065,7 +1260,7 @@ Partial Class frmTimesheet
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(50, 375)
+        Me.Label7.Location = New System.Drawing.Point(55, 375)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(95, 25)
         Me.Label7.TabIndex = 17
@@ -1085,7 +1280,7 @@ Partial Class frmTimesheet
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(50, 320)
+        Me.Label6.Location = New System.Drawing.Point(55, 320)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(118, 25)
         Me.Label6.TabIndex = 16
@@ -1116,7 +1311,7 @@ Partial Class frmTimesheet
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(50, 214)
+        Me.Label4.Location = New System.Drawing.Point(55, 214)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(83, 25)
         Me.Label4.TabIndex = 14
@@ -1125,7 +1320,7 @@ Partial Class frmTimesheet
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(50, 268)
+        Me.Label5.Location = New System.Drawing.Point(55, 268)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(89, 25)
         Me.Label5.TabIndex = 15
@@ -1134,7 +1329,7 @@ Partial Class frmTimesheet
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(50, 163)
+        Me.Label8.Location = New System.Drawing.Point(55, 163)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(80, 25)
         Me.Label8.TabIndex = 18
@@ -1154,7 +1349,7 @@ Partial Class frmTimesheet
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(50, 113)
+        Me.Label3.Location = New System.Drawing.Point(55, 113)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(91, 25)
         Me.Label3.TabIndex = 13
@@ -1171,9 +1366,23 @@ Partial Class frmTimesheet
         Me.chkSat.TabIndex = 8
         Me.chkSat.UseVisualStyleBackColor = True
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(1146, 1)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(84, 50)
+        Me.Label20.TabIndex = 75
+        Me.Label20.Text = "Regular Holiday"
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox2.Controls.Add(Me.GroupBox1)
+        Me.GroupBox2.Controls.Add(Me.lblRegularHoliday)
+        Me.GroupBox2.Controls.Add(Me.lblSpecialHoliday)
+        Me.GroupBox2.Controls.Add(Me.Label18)
+        Me.GroupBox2.Controls.Add(Me.Label19)
         Me.GroupBox2.Controls.Add(Me.lblTotalLate)
         Me.GroupBox2.Controls.Add(Me.lblTotalUndertime)
         Me.GroupBox2.Controls.Add(Me.lblTotalOvertime)
@@ -1184,10 +1393,100 @@ Partial Class frmTimesheet
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Location = New System.Drawing.Point(16, 538)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(606, 286)
+        Me.GroupBox2.Size = New System.Drawing.Size(1341, 286)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Timesheet Summary"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.PictureBox2)
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.GroupBox1.Location = New System.Drawing.Point(1063, 60)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(239, 160)
+        Me.GroupBox1.TabIndex = 12
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Holiday"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(60, 101)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(77, 25)
+        Me.Label17.TabIndex = 4
+        Me.Label17.Text = "Special"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(60, 46)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(79, 25)
+        Me.Label16.TabIndex = 3
+        Me.Label16.Text = "Regular"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Blue
+        Me.PictureBox2.Location = New System.Drawing.Point(19, 98)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Red
+        Me.PictureBox1.Location = New System.Drawing.Point(19, 44)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'lblRegularHoliday
+        '
+        Me.lblRegularHoliday.AutoSize = True
+        Me.lblRegularHoliday.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.lblRegularHoliday.Location = New System.Drawing.Point(762, 114)
+        Me.lblRegularHoliday.Name = "lblRegularHoliday"
+        Me.lblRegularHoliday.Size = New System.Drawing.Size(32, 32)
+        Me.lblRegularHoliday.TabIndex = 11
+        Me.lblRegularHoliday.Text = "0"
+        '
+        'lblSpecialHoliday
+        '
+        Me.lblSpecialHoliday.AutoSize = True
+        Me.lblSpecialHoliday.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSpecialHoliday.Location = New System.Drawing.Point(762, 63)
+        Me.lblSpecialHoliday.Name = "lblSpecialHoliday"
+        Me.lblSpecialHoliday.Size = New System.Drawing.Size(32, 32)
+        Me.lblSpecialHoliday.TabIndex = 10
+        Me.lblSpecialHoliday.Text = "0"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(501, 114)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(261, 29)
+        Me.Label18.TabIndex = 9
+        Me.Label18.Text = "Regular Holiday Hours:"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(501, 63)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(257, 29)
+        Me.Label19.TabIndex = 8
+        Me.Label19.Text = "Special Holiday Hours:"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblTotalLate
         '
@@ -1529,7 +1828,6 @@ Partial Class frmTimesheet
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Payroll.My.Resources.Resources.login_bg
         Me.ClientSize = New System.Drawing.Size(3147, 1234)
-        Me.ControlBox = False
         Me.Controls.Add(Me.lblEmployeeID)
         Me.Controls.Add(Me.lblCutoffID)
         Me.Controls.Add(Me.cmbCutoff)
@@ -1537,7 +1835,6 @@ Partial Class frmTimesheet
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.grpTimesheet)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmTimesheet"
         Me.Text = "frmTimesheet"
@@ -1548,6 +1845,10 @@ Partial Class frmTimesheet
         Me.TableLayoutPanel1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.UnsubmittedGrid, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1686,4 +1987,29 @@ Partial Class frmTimesheet
     Friend WithEvents lblEmployeeName As Label
     Friend WithEvents lblCutoffID As Label
     Friend WithEvents lblEmployeeID As Label
+    Friend WithEvents lblRegularHoliday As Label
+    Friend WithEvents lblSpecialHoliday As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblThuSH As Label
+    Friend WithEvents lblThuRH As Label
+    Friend WithEvents lblWedSH As Label
+    Friend WithEvents lblWedRH As Label
+    Friend WithEvents lblTueSH As Label
+    Friend WithEvents lblTueRH As Label
+    Friend WithEvents lblMonSH As Label
+    Friend WithEvents lblMonRH As Label
+    Friend WithEvents lblSunSH As Label
+    Friend WithEvents lblSunRH As Label
+    Friend WithEvents lblSatSH As Label
+    Friend WithEvents lblSatRH As Label
+    Friend WithEvents lblFriSH As Label
+    Friend WithEvents lblFriRH As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
 End Class

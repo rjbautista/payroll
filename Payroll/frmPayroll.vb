@@ -2,12 +2,7 @@
 
 Public Class frmPayroll
     Private Sub FrmPayroll_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PayrollDataSet4.TimesheetHeader' table. You can move, or remove it, as needed.
-        Me.TimesheetHeaderTableAdapter.Fill(Me.PayrollDataSet4.TimesheetHeader)
-
         PopulateCutoff()
-        RefreshGrid()
-
     End Sub
 
     Private Sub PopulateCutoff()
@@ -17,6 +12,7 @@ Public Class frmPayroll
         If ds.Tables(0).Rows.Count = 0 Then
             MsgBox("There are no cutoff date, you will need to create a payroll period first before you can enter the timesheet.", vbInformation)
             frmCutoff.ShowDialog()
+            Exit Sub
         Else
             cmbCutoff.Items.Clear()
             For Each Row As DataRow In ds.Tables(0).Rows
@@ -25,6 +21,8 @@ Public Class frmPayroll
                 cmbCutoff.Items.Add(sdate.ToShortDateString() & " - " & edate.ToShortDateString())
             Next
             cmbCutoff.SelectedIndex = 0
+
+            RefreshGrid()
         End If
 
     End Sub
@@ -50,6 +48,11 @@ Public Class frmPayroll
     End Sub
 
     Private Sub CmdProcess_Click(sender As Object, e As EventArgs) Handles cmdProcess.Click
+
+        If payrollGrid.Rows.Count <= 0 Then
+            MsgBox("There is no timesheet submitted on this payroll period.", vbInformation)
+            Exit Sub
+        End If
 
         cmdProcess.Enabled = False
         cmdProcess.Text = "Processing payroll please wait."
@@ -77,7 +80,7 @@ Public Class frmPayroll
                 Dim cutoffEnd = ""
                 With cdr.Read
                     cutoffStart = cdr("start_date")
-                    cutoffEnd = cdr("start_date")
+                    cutoffEnd = cdr("end_date")
                 End With
 
                 Dim Rate = dr.Item("rate")
@@ -105,11 +108,20 @@ Public Class frmPayroll
                 ' Compute overtime 
                 Dim OvertimeRate = OvertimeHours * HourlyRate
 
-                Dim NetPay = (Gross + OvertimeRate) - Deductions
+
+                ' Compute holiday pay
+                Dim SpecialHoliday = dr.Item("total_special_holiday")
+                Dim RegularHoliday = dr.Item("total_regular_holiday")
+                Dim HolidayPay = (RegularHoliday * HourlyRate) + (SpecialHoliday * (HourlyRate * 0.3))
+
+                Dim Subtotal = Gross + OvertimeHours + HolidayPay
+
+                Dim NetPay = (Gross + OvertimeRate + HolidayPay) - Deductions
+
 
                 ' Create payroll header
                 Dim cn As OleDb.OleDbConnection = New OleDb.OleDbConnection(PY.ConnectionString)
-                Dim cm = New OleDb.OleDbCommand("INSERT INTO Payroll (employeeID, cutoffID, cutoff_start, cutoff_end, overtime, late, undertime, sss, philhealth, pagibig, total_deductions, grosspay, netpay, dow) VALUES (@employeeID, @cutoffID, @cutoff_start, @cutoff_end, @overtime, @late, @undertime, @sss, @philhealth, @pagibig, @total_deductions, @grosspay, @netpay, @dow)", connection)
+                Dim cm = New OleDb.OleDbCommand("INSERT INTO Payroll (employeeID, cutoffID, cutoff_start, cutoff_end, overtime, late, undertime, sss, philhealth, pagibig, total_deductions, holiday, grosspay, subtotal, netpay, dow) VALUES (@employeeID, @cutoffID, @cutoff_start, @cutoff_end, @overtime, @late, @undertime, @sss, @philhealth, @pagibig, @total_deductions, @holiday, @grosspay, @subtotal, @netpay, @dow)", connection)
 
                 cn.Open()
                 cm.Parameters.Add("@employeeID", OleDbType.Numeric).Value = dr.Item("employeeID")
@@ -123,7 +135,9 @@ Public Class frmPayroll
                 cm.Parameters.Add("@philhealth", OleDbType.Currency).Value = Philhealth
                 cm.Parameters.Add("@pagibig", OleDbType.Currency).Value = PagIbig
                 cm.Parameters.Add("@total_deductions", OleDbType.Currency).Value = Deductions
+                cm.Parameters.Add("@holiday", OleDbType.Currency).Value = HolidayPay
                 cm.Parameters.Add("@grosspay", OleDbType.Currency).Value = Gross
+                cm.Parameters.Add("@subtotal", OleDbType.Currency).Value = Subtotal
                 cm.Parameters.Add("@netpay", OleDbType.Currency).Value = NetPay
                 cm.Parameters.Add("@dow", OleDbType.Currency).Value = DOW
 
@@ -152,7 +166,7 @@ Public Class frmPayroll
         cmdProcess.Text = "Process Payroll"
         cmdProcess.Enabled = True
         MsgBox("Payroll process completed.")
-        PopulateCutoff()
-        RefreshGrid()
+        Me.Hide()
+        frmPrint.ShowDialog()
     End Sub
 End Class

@@ -76,4 +76,30 @@ Public Class Holiday
 
         Return dr
     End Function
+
+    Public Function GetByDate(ByVal HolidayDate As Date) As OleDb.OleDbDataReader
+        Dim connection As OleDb.OleDbConnection = New OleDb.OleDbConnection(PY.ConnectionString)
+        Dim dr As OleDb.OleDbDataReader
+        Dim sql As String = "SELECT * FROM Holidays WHERE effectivity_date = @HolidayDate"
+        Dim command = New OleDb.OleDbCommand(sql, connection)
+        connection.Open()
+        command.Parameters.Add("@HolidayDate", OleDbType.Date).Value = HolidayDate
+        dr = command.ExecuteReader
+
+        Return dr
+    End Function
+
+    Public Function GetByDate(ByVal StartDate As Date, ByVal EndDate As Date) As OleDb.OleDbDataReader
+        Dim connection As OleDb.OleDbConnection = New OleDb.OleDbConnection(PY.ConnectionString)
+        Dim dr As OleDb.OleDbDataReader
+        Dim sql As String = "SELECT * FROM Holidays WHERE effectivity_date >= @StartDate AND effectivity_date <= @EndDate"
+        Dim command = New OleDb.OleDbCommand(sql, connection)
+        connection.Open()
+        command.Parameters.Add("@StartDate", OleDbType.Date).Value = StartDate
+        command.Parameters.Add("@EndDate", OleDbType.Date).Value = EndDate
+        dr = command.ExecuteReader
+
+        Return dr
+
+    End Function
 End Class
