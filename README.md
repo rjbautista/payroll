@@ -8,3 +8,5 @@ Features:
 * Weekly Timesheet input
 * Weekly (7 days) cutoff payroll setup.
 * Payslip Report.
+
+Feel free to download, use, modify.
